@@ -1,3 +1,5 @@
+vim.g.netrw_liststyle = 3
+
 local opt = vim.opt -- for conciseness
 
 -- line numbers
@@ -38,4 +40,8 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
-opt.iskeyword:append("-") -- consider string-string as whole word
+-- turn off swapfile
+opt.swapfile = false
+
+-- save settings
+opt.autowrite = true -- automatically :write before running commands
